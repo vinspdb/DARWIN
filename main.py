@@ -20,4 +20,5 @@ if __name__ == '__main__':
                  )
     darwin.process_stream()
 
-#python main.py -event_log bpi13closed -model_update 0 -strategy FT
+#Example:
+#python main.py -event_log PrepaidTravelCost -model_update 0 -strategy FT
