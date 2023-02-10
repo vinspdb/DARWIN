@@ -31,6 +31,7 @@ import pickle
 from gensim.models import Word2Vec
 from anytree import Node
 import memory_tree as mem_tree
+from sklearn.metrics import f1_score
 
 CASE_ID_KEY = 'case:concept:name'
 ACTIVITY_KEY = 'concept:name'
@@ -770,4 +771,13 @@ class Darwin:
                             pt_int_old = self.trace_conversion(old_w2v_dict, traces, self.vec_dim)
                             y_pred = self.make_prediction(old_model, pt_int_old, old_label)
                             prediction[case] = [y_pred]
-
+        if self.drift_discover_algorithm == DriftDiscoverMode.ADWIN:
+            res = pd.read_csv('results/' + self.log_name + '/' + self.log_name + '_DriftDiscoverMode.ADWIN_result.csv')
+            st = '_D_'
+        else:
+            res = pd.read_csv('results/' + self.log_name + '/' + self.log_name + '_DriftDiscoverMode.STATIC_result.csv')
+            st = '_S_'
+        fres = (round(f1_score(res['Real'].to_list(), res['Predicted'].to_list(), average='macro'), 3))
+        output = open("results/res" + st +self.log_name +  ".pkl",'wb')
+        pickle.dump(fres, output)
+        output.close()
