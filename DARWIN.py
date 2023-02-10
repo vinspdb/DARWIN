@@ -139,10 +139,10 @@ class Darwin:
         self.cut = self.get_cut_value(self.log_name)
         self.model_update = model_update
 
-        self.count_model = 0  
-        self.prefix_list = []  
-        self.next_act_list = [] 
-        self.best_params = {}  
+        self.count_model = 0
+        self.prefix_list = []
+        self.next_act_list = []
+        self.best_params = {}
         self.vec_dim = 0
         self.train_stragegy = train_strategy
 
@@ -593,26 +593,6 @@ class Darwin:
                 mem_tree.pruned_tree(check_case_id, hashtable)
 
             if self.processed_events == self.cut:
-                if path.exists(
-                        "models/" + self.log_name + "/generate_" + self.log_name + '_' + str(self.count_model) + ".h5"):
-                    model = load_model(
-                        "models/" + self.log_name + "/generate_" + self.log_name + '_' + str(
-                            self.count_model) + ".h5")
-
-                    with open("label/" + "generate_" + self.log_name + '_' + str(self.count_model) + ".pkl",
-                              'rb') as pickle_file:
-                        label = pickle.load(pickle_file)
-
-                    with open("w2v_dict/" + self.log_name + "/generate_" + self.log_name + '_' + str(
-                            self.count_model) + ".pkl", 'rb') as pickle_file:
-                        w2v_dict = pickle.load(pickle_file)
-
-                    with open("params/" + self.log_name + "/" + self.log_name + ".pickle", 'rb') as pickle_file:
-                        params = pickle.load(pickle_file)
-
-                    self.vec_dim = 2 ** int(params["vector_size"])
-
-                else:
                     if self.drift_discover_algorithm == DriftDiscoverMode.ADWIN:
 
                         log_file.write('\n10% of events')
