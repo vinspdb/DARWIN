@@ -1,0 +1,84 @@
+Processing event stream...
+
+10% of eventsStarting model selection...Best parameters:{'batch_size': 6, 'cellsize': 66, 'dropout': 0.23715077050290478, 'learning_rate': 0.0005906411193342846, 'n_layers': {'n_layers': 1}, 'vector_size': 8}
+int(self.adwin.width)160
+self.next_act_list2428
+self.prefix_list2428
+number_of_traces_to_be_removed2268
+
+len self.prefix_list160
+Drift detected at index -->2787
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_0.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_1.h5
+int(self.adwin.width)192
+self.next_act_list256
+self.prefix_list256
+number_of_traces_to_be_removed64
+
+len self.prefix_list192
+Drift detected at index -->2915
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_1.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_2.h5
+int(self.adwin.width)512
+self.next_act_list640
+self.prefix_list640
+number_of_traces_to_be_removed128
+
+len self.prefix_list512
+Drift detected at index -->3459
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_2.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_3.h5
+int(self.adwin.width)832
+self.next_act_list960
+self.prefix_list960
+number_of_traces_to_be_removed128
+
+len self.prefix_list832
+Drift detected at index -->3993
+Attention! Training time > Stream Time
+load previous model...
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_3.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_4.h5
+Prediction of Case over the time-->request for payment 42114
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_3.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_4.h5
+int(self.adwin.width)736
+self.next_act_list864
+self.prefix_list864
+number_of_traces_to_be_removed128
+
+len self.prefix_list736
+Drift detected at index -->4028
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_4.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_5.h5
+Case over the time-->request for payment 42114
+int(self.adwin.width)864
+self.next_act_list992
+self.prefix_list992
+number_of_traces_to_be_removed128
+
+len self.prefix_list864
+Drift detected at index -->4312
+Attention! Training time > Stream Time
+load previous model...
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_5.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_6.h5
+Prediction of Case over the time-->request for payment 2658
+Attention! Training time > Stream Time
+load previous model...
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_5.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_6.h5
+Prediction of Case over the time-->request for payment 2662
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_5.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_6.h5
+Case over the time-->request for payment 2658
+Case over the time-->request for payment 2662
+int(self.adwin.width)896
+self.next_act_list1024
+self.prefix_list1024
+number_of_traces_to_be_removed128
+
+len self.prefix_list896
+Drift detected at index -->4480
+OLD Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_6.h5
+NEW Model -->models/PrepaidTravelCost/generate_PrepaidTravelCost_7.h5
