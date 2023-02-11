@@ -655,25 +655,11 @@ class Darwin:
             elif self.processed_events > self.cut:
                 stdout.write(f'\r\tCurrent event: {self.processed_events}')
                 if case in prediction:
-                    if case in prediction_temp:
-                        log_file.write('\nCase over the time-->' + str(case))
-                        if prediction_temp[case][0] == activity:
-                            acc = 1
-                        else:
-                            acc = 0
-                        file_prediction.write(str(acc) + ',' + prediction_temp[case][0] + ',' + activity + '\n')
-                        prediction_temp.pop(case)
-
-                        if prediction[case][0] == activity:
+                    if prediction[case][0] == activity:
                             res = 1
-                        else:
-                            res = 0
                     else:
-                        if prediction[case][0] == activity:
-                            res = 1
-                        else:
                             res = 0
-                        file_prediction.write(str(res) + ',' + prediction[case][0] + ',' + activity + '\n')
+                    file_prediction.write(str(res) + ',' + prediction[case][0] + ',' + activity + '\n')
 
                     prediction.pop(str(case))
 
@@ -743,10 +729,6 @@ class Darwin:
                             pt_int = self.trace_conversion(w2v_dict, traces, self.vec_dim)
                             y_pred2 = self.make_prediction(model, pt_int, label)
                             prediction[case] = [y_pred2]
-
-                            pt_int_old = self.trace_conversion(old_w2v_dict, traces, self.vec_dim)
-                            y_pred = self.make_prediction(old_model, pt_int_old, old_label)
-                            prediction_temp[case] = [y_pred]
                         elif get_pred_curr == 1:
                             pt_int_old = self.trace_conversion(old_w2v_dict, traces, self.vec_dim)
                             y_pred = self.make_prediction(old_model, pt_int_old, old_label)
