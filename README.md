@@ -9,8 +9,7 @@
 Please cite our work if you find it useful for your research and work.
 
 ```
-@INPROCEEDINGS{8786066,
- @article{PASQUADIBISCEGLIE2023106461,
+@article{PASQUADIBISCEGLIE2023106461,
 title = {DARWIN: An online deep learning approach to handle concept drifts in predictive process monitoring},
 journal = {Engineering Applications of Artificial Intelligence},
 volume = {123},
