@@ -23,4 +23,11 @@ author = {Vincenzo Pasquadibisceglie and Annalisa Appice and Giovanna Castellano
 ```
 # How to use:
 
+DARWIN requires the following parameters:
 
+- model_update: 0 concet drift detector active otherwise 1
+- stategy: FT (Fine-Tuning), RT (Re-training)
+
+```
+python main.py -event_log PrepaidTravelCost -model_update 0 -strategy FT
+```
